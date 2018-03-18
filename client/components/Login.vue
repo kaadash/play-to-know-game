@@ -1,9 +1,11 @@
 <template>
   <div class="login-wrapper">
     <div class="login-container">
-      <input type="text">
-      <input type="text">
-      <button @click="$store.commit('LOGIN')">Login</button>
+      <label for="">email</label>
+      <input type="text" v-model="email">
+      <label for="">password</label>
+      <input type="text" v-model="password">
+      <button @click="goToDashboard">Login</button>
       <button @click="$store.commit('LOGIN_WITH_FACEBOOK')">Login with facebook</button>
     </div>
   </div>
@@ -11,9 +13,19 @@
 
 <script>
 export default {
+  data: () => ({
+    email: '',
+    password: '',
+  }),
   computed: {
     count() {
       return this.$store.state.count
+    }
+  },
+  methods: {
+    goToDashboard: function() {
+      console.log('action', this.$router);
+      this.$router.push('dashboard');
     }
   }
 }
