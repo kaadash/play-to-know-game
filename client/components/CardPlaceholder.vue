@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .card-placeholder {
     width: 120px;
     height: 120px;

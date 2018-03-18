@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard-container">
     This is dashboard
-    <CardList></CardList>
+    <CardList :list="list"></CardList>
   </div>
 </template>
 
@@ -11,6 +11,9 @@ import OpponentSearchBar from 'components/OpponentSearchBar'
 import CardList from 'components/CardList'
 
 export default {
+  data: () => ({
+    list: [{name: 'asd'}, {name: 12332}]
+  }),
   components: {
     CardList,
     OpponentSearchBar
