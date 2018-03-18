@@ -24,7 +24,6 @@ export default {
   },
   methods: {
     goToDashboard: function() {
-      console.log('action', this.$router);
       this.$router.push('dashboard');
     }
   }

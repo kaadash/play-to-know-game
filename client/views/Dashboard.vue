@@ -1,6 +1,7 @@
 <template>
   <div class="dashboard-container">
     This is dashboard
+    <CardList></CardList>
   </div>
 </template>
 
