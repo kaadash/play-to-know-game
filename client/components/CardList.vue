@@ -1,7 +1,7 @@
 <template>
 <div class="card-list">
     <CardPlaceholder></CardPlaceholder>
-    <div v-for="card in list">
+    <div v-for="(card, index) in list" :key="index">
         <Card name="asdasd"></Card>
     </div>
 </div>
