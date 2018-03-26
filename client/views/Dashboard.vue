@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard-container">
     This is dashboard
-    <CardList :list="list" :on-add-new-card="addNe"></CardList>
+    <CardList :list="list" :on-add-new-card="addNewCard"></CardList>
     <GamesList :games="games"></GamesList>
   </div>
 </template>
@@ -14,7 +14,7 @@ import GamesList from 'components/GamesList'
 
 export default {
   data: () => ({
-    list: [{name: 'asd'}, {name: 12332}],
+    list: [{name: 'asd'}],
     games: [{id: 1, opponent: 'kadash'}],
   }),
   methods: {

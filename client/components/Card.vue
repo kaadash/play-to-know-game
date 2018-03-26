@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" :style="{backgroundColor: color}">
     <div v-if="name">{{name}}</div>
     <img v-if="cardUrl" :src="cardUrl">
   </div>
@@ -10,6 +10,7 @@ export default {
   props: {
       cardUrl: [String],
       name: [String],
+      color: [String],
   }
 }
 </script>
@@ -25,7 +26,8 @@ img {
     line-height: 120px;
     border-radius: 4px;
     border: 1px dashed rgba(0, 0, 0, .4);
-    color: rgba(0, 0, 0, .87);
+    color: white;
+    font-weight: bold;
     text-align: center;
     display: flex;
     justify-content: center;

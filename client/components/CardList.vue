@@ -3,7 +3,11 @@
     <CardCreator :add-new-card="onAddNewCard"></CardCreator>
     <div class="card-list">
     <div v-for="(card, index) in list" :key="index">
-        <Card :card-url="card.imageUrl" :name="card.name"></Card>
+        <Card
+          :card-url="card.imageUrl"
+          :name="card.name"
+          :color="card.color"
+        ></Card>
     </div>
 </div>
 </div>
