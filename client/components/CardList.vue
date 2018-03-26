@@ -1,31 +1,38 @@
 <template>
-<div class="card-list">
-    <CardPlaceholder></CardPlaceholder>
+<div class="card-list-container">
+    <CardCreator :add-new-card="onAddNewCard"></CardCreator>
+    <div class="card-list">
     <div v-for="(card, index) in list" :key="index">
-        <Card name="asdasd"></Card>
+        <Card :card-url="card.imageUrl" :name="card.name"></Card>
     </div>
+</div>
 </div>
 </template>
 
 <script>
-import CardPlaceholder from '../components/CardPlaceholder';
+import CardCreator from '../components/CardCreator';
 import Card from '../components/Card';
 
 export default {
     props: {
-        list: [Array]
+        list: [Array],
+        onAddNewCard: [Function]
     },
     components: {
       Card,
-      CardPlaceholder,
+      CardCreator,
     }
 }
 </script>
 
 <style scoped>
     .card-list {
-        display: flex;
+      flex-wrap: wrap;
+      display: flex;
     }
+  .card-list-container {
+   display: flex;
+  }
 </style>
 
 

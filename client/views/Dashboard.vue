@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard-container">
     This is dashboard
-    <CardList :list="list"></CardList>
+    <CardList :list="list" :on-add-new-card="addNe"></CardList>
     <GamesList :games="games"></GamesList>
   </div>
 </template>
@@ -17,6 +17,12 @@ export default {
     list: [{name: 'asd'}, {name: 12332}],
     games: [{id: 1, opponent: 'kadash'}],
   }),
+  methods: {
+    addNewCard(card) {
+      console.log(card);
+      this.list.push(card);
+    }
+  },
   components: {
     CardList,
     OpponentSearchBar,

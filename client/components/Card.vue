@@ -1,7 +1,7 @@
 <template>
   <div class="card">
-    <div>{{name}}</div>
-    <img :src="cardUrl">
+    <div v-if="name">{{name}}</div>
+    <img v-if="cardUrl" :src="cardUrl">
   </div>
 </template>
 
@@ -13,7 +13,12 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
+img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
 .card {
     width: 120px;
     height: 120px;
